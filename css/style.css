@@ -417,11 +417,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 .footer__text{
     font-size: 14px;
+    line-height: 1.5;
     color: #fff;
 }
-.footer__list:not(:last-child) {
-    margin-right: 32px;
-}
+
 @media screen and (max-width: 992px) {
     .header {
         height: 80px;  
@@ -480,12 +479,7 @@ h1,h2,h3,h4,h5,h6 {
     .contact {
         padding: 60px 0;
     }
-    .footer__spawn-one {
-        font-size: 32px;
-    }
-    .footer_blog-text {
-        margin-left: 10px;
-    }
+
 }
 @media screen and (max-width: 768px) {
     .header__menu {
