@@ -418,7 +418,7 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: end;
 }
 .guide-sub__spawn {
-    color: #674b0d;
+    color: #000;
     transition: 0.5s;
 }
 .guide-sub__spawn-anim:hover {
