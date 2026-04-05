@@ -2,233 +2,219 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>СНО ФИТиКС — студенческое научное общество</title>
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/norm.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Главная</title>
 </head>
 <body>
-
-<div class="wrapper">
-    <!-- ШАПКА (sticky + бургер) -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="logo-wrapper">
-                <div class="logo-icon">
-                    <i class="fas fa-flask"></i>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__contaier contaier">
+                <div class="header__blok-logo">
+                    <div class="header_blok-img">
+                        <img src="./img/logo.png" alt="logo" class="header__logo">
+                    </div>
+                    <div class="header_blog-text">
+                        <div class="header__spawn-one">СНО ФИТиКС</div>
+                        <div class="header__spawn-two">Глаза боятся, руки делают</div>
+                    </div>
                 </div>
-                <div class="logo-text">
-                    <h1>СНО ФИТиКС</h1>
-                    <p>Глаза боятся, руки делают</p>
-                </div>
-            </div>
-            <div class="burger" id="burgerBtn">
-                <span></span><span></span><span></span>
-            </div>
-            <nav class="nav-menu" id="navMenu">
-                <a href="#about" class="nav-link">О нас</a>
-                <a href="#projects" class="nav-link">Проекты</a>
-                <a href="#contact" class="nav-link">Контакты</a>
-                <a href="https://vk.com/fitiks_omgtu" class="nav-link" target="_blank">Новости</a>
-                <a href="#contact" class="nav-link cta">Связаться</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ГЕРОЙ -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-badge"><i class="fas fa-rocket"></i> Добро пожаловать</div>
-                <h1>СНО ФИТиКС</h1>
-                <h2>Приглашает тебя в свои ряды!</h2>
-                <p class="hero-text">СНО ФИТиКС — это место для реализации твоих самых смелых идей. Возможность проявить себя, раскрыть таланты и создавать технологии будущего.</p>
-                <div class="btn-group">
-                    <a href="#howtojoin" class="btn btn-primary"><i class="fas fa-user-plus"></i> Вступить в СНО</a>
-                    <a href="https://cloud.mail.ru/public/jK72/MTWwKhYtf" class="btn btn-outline" target="_blank"><i class="fas fa-file-alt"></i> Положение СНО</a>
+                <div class="header__menu" id="menu">
+                      <nav class="header__nav" id="nav">
+                        <ul class="header__item">
+                            <li class="header__list"><a href="#aboutus" class="header__link">О нас</a></li>
+                            <li class="header__list"><a href="#projects" class="header__link">Проекты</a></li>
+                            <li class="header__list"><a href="#contact" class="header__link">Контакты</a></li>
+                            <li class="header__list"><a href="https://vk.com/fitiks_omgtu" class="header__link">Новости</a></li>
+                            <li class="header__list header__list-btn"><a href="#contact" class="header__link header__link-btn">Связаться</a></li>
+                        </ul>
+                      </nav>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933244.png" alt="Робот-учёный" loading="lazy">
+        </header>
+        <section class="subheader" >
+            <div class="subheader__contaier contaier">
+               <div class="subheader__content"> 
+                <h1 class="subheader__heading-h1">СНО ФИТиКС</h1>
+               <h2 class="subheader__heading-h2">Приглашает тебя в свои ряды!</h2>
+               <p class="subheader__text">СНО ФИТиКС - это место для реализации твоих самых смелых идей. Возможность проявить себя и раскрыть таланты.</p>
+               <div class="subheader__menu">
+                <a href="#guide-sub" class="subheader__link">Всутпить в СНО</a>
+                <a href="https://cloud.mail.ru/public/jK72/MTWwKhYtf" class="subheader__link subheader__sub-link">Положение СНО</a>
+               </div>
             </div>
-        </div>
-    </section>
+               <div class="subheader__blok-img">
+                <img src="./img/Subheader/robot.png" alt="robot" class="subheader__img">
+               </div>
+            </div>
+        </section>
+        <main class="main">
+            <section class="aboutus" id ="aboutus">
+                <div class="aboutus__contaier contaier">
+                    <h2 class="aboutus__heading-h2">СНО ФИТиКС это</h2>
+                    <ul class="aboutus__item">
+                        <li class="aboutus__list aboutus__list-fonsub">
+                            <div class="aboutus__sub-list"> 
+                                <div class="aboutus__list-text aboutus__list-texttwo aboutus__list-fonone" >Пропуск пар</div>
+                                <div class="aboutus__list-text aboutus__list-textone">Стажировки</div>
+                            </div>
+                        </li>
+                        <li class="aboutus__list aboutus__list-fonsub">
+                            <div class="aboutus__sub-list"> 
+                                <div class="aboutus__list-text aboutus__list-texttwo aboutus__list-fontwo" >Участие в конференциях</div>
+                                <div class="aboutus__list-text aboutus__list-textone">Повышение стипендии</div>
+                            </div>
+                        </li>
+                        <li class="aboutus__list aboutus__list-fonsub">
+                            <div class="aboutus__sub-list"> 
+                                <div class="aboutus__list-text aboutus__list-texttwo aboutus__list-fonhree" >Общение с единомышлиниками</div>
+                                <div class="aboutus__list-text aboutus__list-textone">Не забываемые эмоции</div>
+                            </div>
+                        </li>
+                    </div>
+            </section>
+            <section class="guide" id="guide">
+                <div class="guide__contaier contaier">
+                    <h2 class="aboutus__heading-h2 guide__heading-h2">РУКОВОДСТВО СНО</h2>
+                    <ul class="guide__item">
+                        <li class="guide__list">
+                            <div class="guide__block-img"></div>
+                            <h3 class="guide__heading-h3">Свободная вакансия</h3>
+                            <div class="guide__text-name">Председатель</div>
+                            <div class="guide__text-nuber">Телеграмм</div>
 
-    <!-- СЕКЦИЯ "СНО ФИТиКС ЭТО" (флип-карточки) -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-wrap">
-                <h2 class="section-title">СНО ФИТиКС это</h2>
-            </div>
-            <div class="cards-grid">
-                <!-- карточка 1 -->
-                <div class="flip-card">
-                    <div class="flip-inner">
-                        <div class="flip-front" style="background-image: linear-gradient(135deg, #1e2b3c, #0f212e);">
-                            <span><i class="fas fa-ticket-alt"></i> Пропуск пар</span>
+                        </li>
+                        <li class="guide__list">
+                            <div class="guide__block-img"></div>
+                            <h3 class="guide__heading-h3">Свободная вакансияк</h3>
+                            <div class="guide__text-name">Заместитель председателя</div>
+                            <div class="guide__text-nuber">Телеграмм </div>
+                        </li>
+                        <li class="guide__list">
+                            <div class="guide__block-img"></div>
+                            <h3 class="guide__heading-h3">Свободная вакансия</h3>
+                            <div class="guide__text-name">Научный руководитель</div>
+                            <div class="guide__text-nuber">Телеграмм </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="projects" id = "projects">
+                <div class="projects__contaier contaier">
+                    <h2 class="aboutus__heading-h2 projects__heading-h2">ПРОЕКТЫ</h2>
+                    <ul class="projects__item">
+                        <li class="projects__list">
+                            <div class="projects__list-blok projects__list-blok-one">
+                                Line Follower
+                            </div>
+                        </li>
+                        <li class="projects__list">
+                            <div class="projects__list-blok projects__list-blok-two">
+                                Непрерывные технологические процессы
+                            </div>
+                        </li>
+                        <li class="projects__list">
+                            <div class="projects__list-blok projects__list-blok-three">
+                                Промышленный интернет вещей
+                            </div>
+                        </li>
+                        <li class="projects__list">
+                            <div class="projects__list-blok projects__list-blok-four">
+                                Проект археология
+                            </div>
+                        </li>
+                        <li class="projects__list">
+                            <div class="projects__list-blok projects__list-blok-five">
+                                Микромышиные бега
+                            </div>
+                        </li>
+                        <li class="projects__list">
+                            <div class="projects__list-blok projects__list-blok-six">
+                                Мягкая робототехника
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+            <section class="guide-sub" id="guide-sub">
+                <div class="contaier">
+                    <h2 class="aboutus__heading-h2 guide-sub__heading-h2">ВСТУПИТЬ В СНО</h2>
+                </div>
+                <div class="guide-sub__nav">
+                    <div class="guide-sub__blok">
+                        <div class="guide-sub__subblok guide__subblock-one">
+                            <div class="guide-sub__contaier contaier">
+                                <div class="guide-sub__text">
+                                    Скачай <a href="https://cloud.mail.ru/public/3ztb/wz8PmjiMn" class="guide-sub__spawn guide-sub__spawn-anim">бланк</a>   
+                                </div>
+                                <div class="guide-sub__blok-img">
+                                    <img src="./icon/right-left.png" alt="swap" class="guide-sub__img">
+                                </div>
+                            </div>
                         </div>
-                        <div class="flip-back">
-                            <i class="fas fa-briefcase"></i>
-                            <h3>Стажировки</h3>
-                            <p>Реальные проекты с предприятиями и первые шаги в карьере.</p>
+                    </div>
+                    <div class="guide-sub__blok guide__block-two">
+                        <div class="guide-sub__subblok  guide__subblock-two">
+                            <div class="guide-sub__contaier contaier">
+                                <div class="guide-sub__text">
+                                    Заполни его по <a href="https://cloud.mail.ru/public/dGx5/VdKFzLBAL" class="guide-sub__spawn guide-sub__spawn-anim">образцу</a>
+                                </div>
+                                <div class="guide-sub__blok-img-two">
+                                    <img src="./icon/right-left.png" alt="swap" class="guide-sub__img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-sub__blok">
+                        <div class="guide-sub__subblok guide__subblock-one">
+                            <div class="guide-sub__contaier contaier">
+                                <div class="guide-sub__text">
+                                    Отнеси в <spawn class="guide-sub__spawn guide-sub__spawn">8-719</spawn>   
+                                </div>
+                                <div class="guide-sub__blok-img">
+                                    <img src="./icon/right-left.png" alt="swap" class="guide-sub__img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-sub__blok guide__block-two">
+                        <div class="guide-sub__subblok guide__subblock-two">
+                            <div class="guide-sub__contaier contaier">
+                                <div class="guide-sub__text">
+                                    Поздравляем вы <spawn class="guide-sub__spawn"> в СНО!</spawn>  
+                                </div>
+                                <div class="guide-sub__blok-img-two">
+                                    <img src="./icon/right-left.png" alt="swap" class="guide-sub__img">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- карточка 2 -->
-                <div class="flip-card">
-                    <div class="flip-inner">
-                        <div class="flip-front" style="background-image: linear-gradient(135deg, #2c3e2f, #1c2c1f);">
-                            <span><i class="fas fa-chalkboard-user"></i> Конференции</span>
-                        </div>
-                        <div class="flip-back">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h3>Повышение стипендии</h3>
-                            <p>Участвуй в конкурсах и грантах — получай заслуженные бонусы.</p>
-                        </div>
+            </section>
+            <section class="contact" id ="contact">
+                <div class="contact__contaier contaier">
+                    <h2 class="aboutus__heading-h2 contact__heading-h2">КОНТАКТЫ</h2>
+                    <p class="contact__text">Если появились вопросы свяжитесь с<br> нами мы всегда готовы на них ответить</p>
+                    <div class="contact__text">Телефон 65-21-76</div>
+                    <div class="contact__text">Почта fitiks-sno@mail.ru</div>
+                    <h3 class="contact__heading-h3">Беседа в ВК</h3>
+                    <div class="contact__blok-img">
+                        <img src="./img/Link.png" alt="link" class="contact__img">
                     </div>
                 </div>
-                <!-- карточка 3 -->
-                <div class="flip-card">
-                    <div class="flip-inner">
-                        <div class="flip-front" style="background-image: linear-gradient(135deg, #3a2c2a, #2a1e1c);">
-                            <span><i class="fas fa-users"></i> Единомышленники</span>
-                        </div>
-                        <div class="flip-back">
-                            <i class="fas fa-heart"></i>
-                            <h3>Незабываемые эмоции</h3>
-                            <p>Друзья, хакатоны, квесты и научные приключения.</p>
-                        </div>
-                    </div>
-                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__contaier contaier">
+                <div class="footer__text">Проект создан для студенческого научного общества в образовательных целях</div>
             </div>
-        </div>
-    </section>
-
-    <!-- РУКОВОДСТВО -->
-    <section class="section guide-section">
-        <div class="container">
-            <div class="section-wrap">
-                <h2 class="section-title">РУКОВОДСТВО СНО</h2>
-            </div>
-            <div class="guide-grid">
-                <div class="guide-card">
-                    <div class="avatar-placeholder"><i class="fas fa-user-circle fa-4x"></i></div>
-                    <h3>Свободная вакансия</h3>
-                    <p class="guide-role">Председатель</p>
-                    <a href="#" class="guide-contact"><i class="fab fa-telegram"></i> Telegram</a>
-                </div>
-                <div class="guide-card">
-                    <div class="avatar-placeholder"><i class="fas fa-user-circle fa-4x"></i></div>
-                    <h3>Свободная вакансия</h3>
-                    <p class="guide-role">Заместитель председателя</p>
-                    <a href="#" class="guide-contact"><i class="fab fa-telegram"></i> Telegram</a>
-                </div>
-                <div class="guide-card">
-                    <div class="avatar-placeholder"><i class="fas fa-user-circle fa-4x"></i></div>
-                    <h3>Свободная вакансия</h3>
-                    <p class="guide-role">Научный руководитель</p>
-                    <a href="#" class="guide-contact"><i class="fab fa-telegram"></i> Telegram</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ПРОЕКТЫ -->
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="section-wrap">
-                <h2 class="section-title">НАШИ ПРОЕКТЫ</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card"><i class="fas fa-robot"></i><h3>Line Follower</h3><p>Робототехника и алгоритмы трассировки</p></div>
-                <div class="project-card"><i class="fas fa-industry"></i><h3>Непрерывные технологические процессы</h3><p>Автоматизация и управление</p></div>
-                <div class="project-card"><i class="fas fa-microchip"></i><h3>Промышленный интернет вещей</h3><p>IIoT, сенсоры и аналитика</p></div>
-                <div class="project-card"><i class="fas fa-landmark"></i><h3>Проект археология</h3><p>Цифровое моделирование находок</p></div>
-                <div class="project-card"><i class="fas fa-mouse"></i><h3>Микромышиные бега</h3><p>Скоростные микроконтроллеры</p></div>
-                <div class="project-card"><i class="fas fa-hand-peace"></i><h3>Мягкая робототехника</h3><p>Биоинспирированные приводы</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- КАК ВСТУПИТЬ (пошаговый блок) -->
-    <section class="section join-steps" id="howtojoin">
-        <div class="container">
-            <div class="section-wrap">
-                <h2 class="section-title">ВСТУПИТЬ В СНО</h2>
-                <p class="steps-sub">4 простых шага — и ты с нами!</p>
-            </div>
-            <div class="steps-container">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <i class="fas fa-download"></i>
-                    <h3>Скачай бланк</h3>
-                    <a href="https://cloud.mail.ru/public/3ztb/wz8PmjiMn" target="_blank" class="step-link">Заявление →</a>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <i class="fas fa-pen-fancy"></i>
-                    <h3>Заполни по образцу</h3>
-                    <a href="https://cloud.mail.ru/public/dGx5/VdKFzLBAL" target="_blank" class="step-link">Смотреть образец →</a>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <i class="fas fa-door-open"></i>
-                    <h3>Отнеси в 8-719</h3>
-                    <p class="step-desc">Аудитория деканата ФИТиКС</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <i class="fas fa-glass-cheers"></i>
-                    <h3>Ты в СНО!</h3>
-                    <p class="step-desc">Добро пожаловать в семью</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- КОНТАКТЫ -->
-    <section class="section" id="contact">
-        <div class="container contact-container">
-            <h2 class="section-title">КОНТАКТЫ</h2>
-            <p class="contact-text">Если появились вопросы — свяжитесь с нами, мы всегда готовы помочь.</p>
-            <div class="contact-details">
-                <p><i class="fas fa-phone-alt"></i> Телефон: 65-21-76</p>
-                <p><i class="fas fa-envelope"></i> Почта: fitiks-sno@mail.ru</p>
-                <p><i class="fab fa-vk"></i> Беседа ВК: <a href="https://vk.com/fitiks_omgtu" target="_blank">vk.com/fitiks_omgtu</a></p>
-            </div>
-            <div class="contact-icon">
-                <i class="fas fa-link"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- ФУТЕР -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>Проект создан для студенческого научного общества в образовательных целях</p>
-            <p class="footer-copy">© СНО ФИТиКС — 2025</p>
-        </div>
-    </footer>
-</div>
-
-<!-- Мобильное меню JS -->
-<script>
-    const burger = document.getElementById('burgerBtn');
-    const navMenu = document.getElementById('navMenu');
-    burger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        burger.classList.toggle('active');
-    });
-    // закрываем меню при клике на ссылку
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            burger.classList.remove('active');
-        });
-    });
-</script>
+        </footer> 
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
