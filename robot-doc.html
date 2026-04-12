@@ -1,1 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Мобильный робот на ROS2 — Техническая документация</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="wrapper">
+    <!-- ШАПКА (sticky + бургер) -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>ROS2 Mobile Robot</h1>
+                    <p>Техническая документация</p>
+                </div>
+            </div>
+            <div class="burger" id="burgerBtn">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#overview" class="nav-link">Обзор</a>
+                <a href="#hardware" class="nav-link">Компоновка</a>
+                <a href="#electrical" class="nav-link">Электрика</a>
+                <a href="#software" class="nav-link">ПО</a>
+                <a href="#launch" class="nav-link">Запуск</a>
+                <a href="#issues" class="nav-link">Поломки</a>
+                <a href="#resources" class="nav-link">Ресурсы</a>
+                <a href="../index.html" class="nav-link cta">← Назад к СНО</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ГЕРОЙ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-microchip"></i> Дипломный проект</div>
+                <h1>Мобильный робот <span style="color:#f2af2c;">на ROS2</span></h1>
+                <p class="hero-text">Мобильный робот, собранный студентом в рамках дипломного проекта для кафедры АРТ института ОмГТУ. Данный репозиторий является технической документацией для ремонта и эксплуатации мобильной платформы.</p>
+                <div class="btn-group">
+                    <a href="#launch" class="btn btn-primary"><i class="fas fa-play"></i> Запуск системы</a>
+                    <a href="https://github.com" class="btn btn-outline" target="_blank"><i class="fab fa-github"></i> GitHub репозиторий</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="robot-illustration">
+                    <i class="fas fa-microchip"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-cogs"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЦЕЛЬ ПРОЕКТА -->
+    <section class="section" id="overview">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">🎯 Цель проекта</h2>
+            </div>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Тестирование алгоритмов</h3>
+                    <p>SLAM и навигации в реальных условиях</p>
+                </div>
+                <div class="goal-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Исследование ROS2</h3>
+                    <p>Возможностей фреймворка на реальном железе</p>
+                </div>
+                <div class="goal-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Образовательные цели</h3>
+                    <p>Платформа для экспериментов и обучения</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОМПОНОВКА СИСТЕМЫ -->
+    <section class="section" id="hardware">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">🛠️ Компоновка системы</h2>
+            </div>
+            <div class="hardware-grid">
+                <div class="hardware-category">
+                    <h3><i class="fas fa-cogs"></i> Механика</h3>
+                    <ul>
+                        <li><i class="fas fa-motorcycle"></i> 4 мини-мотора с энкодерами</li>
+                        <li><i class="fas fa-chassis"></i> Алюминиевая рама</li>
+                        <li><i class="fas fa-tire"></i> Колеса 80мм</li>
+                    </ul>
+                </div>
+                <div class="hardware-category">
+                    <h3><i class="fas fa-microchip"></i> Электроника</h3>
+                    <ul>
+                        <li><i class="fab fa-raspberry-pi"></i> Raspberry Pi 4 (основной компьютер)</li>
+                        <li><i class="fas fa-bolt"></i> ESP32-S3 (контроллер двигателей)</li>
+                        <li><i class="fas fa-plug"></i> Драйвер HobbyWing QuicRun 1060 60A</li>
+                        <li><i class="fas fa-battery-full"></i> LiPo аккумулятор 12V 5000mAh</li>
+                    </ul>
+                </div>
+                <div class="hardware-category">
+                    <h3><i class="fas fa-eye"></i> Сенсоры</h3>
+                    <ul>
+                        <li><i class="fas fa-satellite-dish"></i> Лидар RPLIDAR A2M8 (8м, 360°)</li>
+                        <li><i class="fas fa-video"></i> Камера ZED</li>
+                        <li><i class="fas fa-compass"></i> IMU MPU6050</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЭЛЕКТРИЧЕСКАЯ СХЕМА -->
+    <section class="section electrical-section" id="electrical">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">⚡ Электрическая схема</h2>
+            </div>
+            <div class="electrical-content">
+                <div class="electrical-diagram">
+                    <div class="diagram-placeholder">
+                        <i class="fas fa-project-diagram"></i>
+                        <p>Схема подключения компонентов</p>
+                        <div class="diagram-nodes">
+                            <span class="node">RPi4</span>
+                            <span class="node">→</span>
+                            <span class="node">ESP32-S3</span>
+                            <span class="node">→</span>
+                            <span class="node">Драйвер</span>
+                            <span class="node">→</span>
+                            <span class="node">Моторы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="electrical-notes">
+                    <div class="note-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h4>Важно</h4>
+                        <p>Используйте понижающий преобразователь 12V → 5V для питания RPi4</p>
+                    </div>
+                    <div class="note-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Защита</h4>
+                        <p>Обязательно установите предохранитель на 10А в цепь питания</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ -->
+    <section class="section" id="software">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">💻 Программное обеспечение</h2>
+            </div>
+            <div class="software-stack">
+                <div class="stack-main">
+                    <h3>Основной стек</h3>
+                    <div class="tech-badges">
+                        <span class="badge">ROS2 Jazzy</span>
+                        <span class="badge">Python 3.10</span>
+                        <span class="badge">C++ 17</span>
+                        <span class="badge">Arduino IDE</span>
+                    </div>
+                </div>
+                <div class="stack-packages">
+                    <h3>ROS2 пакеты</h3>
+                    <div class="packages-grid">
+                        <div class="package-item">nav2 — автономная навигация</div>
+                        <div class="package-item">slam_toolbox — построение карты</div>
+                        <div class="package-item">tf2 — система координат</div>
+                        <div class="package-item">robot_localization — фильтрация сенсоров</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Структура репозитория -->
+            <div class="repo-structure">
+                <h3><i class="fab fa-github"></i> Структура репозитория</h3>
+                <div class="code-block">
+                    <pre>
+ros2_mobile_robot/
+├── firmware/
+│   ├── motor_controller/
+│   │   └── motor_controller.ino
+│   └── README.md
+├── ros2_ws/
+│   ├── src/
+│   │   ├── sllidar_ros2/    # Лидар
+│   │   ├── robot_driver/     # Управление + одометрия
+│   │   └── robot_start/      # Launch файлы
+│   └── install/
+├── README.md
+└── docs/                     # Доп. документация
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЗАПУСК СИСТЕМЫ -->
+    <section class="section launch-section" id="launch">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">🚀 Порядок запуска</h2>
+                <p class="steps-sub">Режим ручного управления</p>
+            </div>
+
+            <div class="launch-tabs">
+                <div class="tab-header">
+                    <button class="tab-btn active" data-tab="pc">На ПК</button>
+                    <button class="tab-btn" data-tab="robot">На роботе</button>
+                </div>
+                <div class="tab-content active" id="pc-tab">
+                    <div class="step-list">
+                        <div class="step-code">
+                            <span class="step-num">1</span>
+                            <code>ssh ros2@Ip_adress</code>
+                            <span class="step-desc">— подключение к Raspberry Pi</span>
+                        </div>
+                        <div class="step-code">
+                            <span class="step-num">2</span>
+                            <code>export ROS_DOMAIN_ID=42</code>
+                            <span class="step-desc">— установка domain ID</span>
+                        </div>
+                        <div class="step-code">
+                            <span class="step-num">3</span>
+                            <code>ros2 run teleop_twist_keyboard teleop_twist_keyboard</code>
+                            <span class="step-desc">— управление роботом</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="robot-tab">
+                    <div class="step-list">
+                        <div class="step-code">
+                            <span class="step-num">1</span>
+                            <code>Ввести пароль</code>
+                            <span class="step-desc">— авторизация</span>
+                        </div>
+                        <div class="step-code">
+                            <span class="step-num">2</span>
+                            <code>export ROS_DOMAIN_ID=42</code>
+                            <span class="step-desc">— установка domain ID</span>
+                        </div>
+                        <div class="step-code">
+                            <span class="step-num">3</span>
+                            <code>ros2 launch robot_start start.launch.py</code>
+                            <span class="step-desc">— запуск узлов робота</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rviz-info">
+                <h4><i class="fas fa-chart-line"></i> Визуализация в RViz2</h4>
+                <p>Добавить топики: <code>/LaserScan</code>, <code>/tf</code>, <code>/Image</code></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОЛОМКИ И НЕИСПРАВНОСТИ -->
+    <section class="section issues-section" id="issues">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">⚠️ Возможные поломки и неисправности</h2>
+            </div>
+            <div class="issues-grid">
+                <div class="issue-card">
+                    <i class="fas fa-battery-quarter"></i>
+                    <h3>Не включается</h3>
+                    <p><strong>Причина:</strong> Разряжен аккумулятор</p>
+                    <p><strong>Решение:</strong> Зарядить LiPo (12.6V полный заряд)</p>
+                </div>
+                <div class="issue-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Нет связи с ESP32</h3>
+                    <p><strong>Причина:</strong> Проблема с UART</p>
+                    <p><strong>Решение:</strong> Перепрошить ESP32, проверить пины</p>
+                </div>
+                <div class="issue-card">
+                    <i class="fas fa-radar"></i>
+                    <h3>Лидар не работает</h3>
+                    <p><strong>Причина:</strong> USB подключение/драйвер</p>
+                    <p><strong>Решение:</strong> Проверить <code>lsusb</code>, перезапустить sllidar_ros2</p>
+                </div>
+                <div class="issue-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Нет связи ROS2</h3>
+                    <p><strong>Причина:</strong> ROS_DOMAIN_ID разный</p>
+                    <p><strong>Решение:</strong> Установить одинаковый ID на всех устройствах</p>
+                </div>
+            </div>
+
+            <!-- Блок про Jetson TX2 -->
+            <div class="warning-note">
+                <i class="fas fa-exclamation-circle"></i>
+                <div>
+                    <h4>Важное примечание</h4>
+                    <p>В качестве базовой платформы изначально использовался NVIDIA Jetson TX2. Однако в процессе разработки возникли сложности с установкой пакета NAV2 из-за ограниченной поддержки ARM64-архитектуры (aarch64) для некоторых зависимостей. Пакет <code>ros-jazzy-navigation2</code> не имеет готовых сборок для Jetson TX2 в ROS2 Jazzy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РЕСУРСЫ -->
+    <section class="section resources-section" id="resources">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">📚 Ресурсы</h2>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Документация</h3>
+                    <a href="https://docs.ros.org/en/jazzy/index.html">docs.ros.org →</a>
+                    <a href="https://docs.nav2.org/">docs.nav2.org →</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Курсы</h3>
+                    <a href="https://stepik.org/course/221157/info">ROS2 — Введение в робототехнику</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fab fa-telegram"></i>
+                    <h3>Сообщества</h3>
+                    <a href="https://t.me/rosrussia">ROS Russia Community →</a>
+                    <a href="https://t.me/ROS_robot_Fitiks">Telegram проекта →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПЛАНЫ РАЗВИТИЯ -->
+    <section class="section roadmap-section">
+        <div class="container">
+            <div class="section-wrap">
+                <h2 class="section-title">📅 Планы развития</h2>
+            </div>
+            <div class="roadmap-items">
+                <div class="roadmap-item">
+                    <span class="status done"><i class="fas fa-check-circle"></i> Готово</span>
+                    <span>Базовая навигация и SLAM</span>
+                </div>
+                <div class="roadmap-item">
+                    <span class="status in-progress"><i class="fas fa-spinner fa-pulse"></i> В работе</span>
+                    <span>Интеграция камеры ZED</span>
+                </div>
+                <div class="roadmap-item">
+                    <span class="status planned"><i class="fas fa-clock"></i> Планируется</span>
+                    <span>Автономная навигация по маршрутам</span>
+                </div>
+                <div class="roadmap-item">
+                    <span class="status planned"><i class="fas fa-clock"></i> Планируется</span>
+                    <span>Веб-интерфейс для управления</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Мобильный робот на ROS2 — Дипломный проект кафедры АРТ ОмГТУ</p>
+            <p class="footer-copy">© 2025 СНО ФИТиКС | Техническая документация</p>
+        </div>
+    </footer>
+</div>
+
+<!-- Мобильное меню JS -->
+<script>
+    const burger = document.getElementById('burgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    if (burger) {
+        burger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+    }
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            burger.classList.remove('active');
+        });
+    });
+
+    // Tabs for launch section
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.dataset.tab;
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(`${tabId}-tab`).classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
