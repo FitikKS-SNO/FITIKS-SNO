@@ -399,7 +399,9 @@ body {
     gap: 30px;
     justify-content: center;
 }
-
+.project-card_a {
+  color: #000;
+}    
 .project-card {
     background: white;
     border-radius: 28px;
